@@ -1,8 +1,33 @@
 # Marker based WebAR
 
 ## AIM:
+To create a Marker-Based WebAR application using MindAR and Three.js, where a 3D model (like glasses) is anchored to a detected facial marker or image marker in real-time through a web browser.
 
 ## ALGORITHM:
+1.Start the Project Setup
+  *Create the project folder with index.html, main.js, and required assets (like 3D models and textures).
+  *Add the MindAR library and Three.js to the HTML page.
+
+2.Initialize the AR Engine
+  *Use MindARThree from the MindAR library to set up the AR engine, camera, and rendering context.
+
+3.Add Lighting
+  *Create a HemisphereLight to properly illuminate the 3D model in the AR scene.
+
+4.Load 3D Model
+  *Load a GLTF 3D model (for example, glasses1/scene.gltf) using an async function and a loader helper (loadGLTF()).
+
+5.Create an Anchor
+  *Use mindarThree.addAnchor(id) to anchor the 3D model to a specific facial landmark (like nose or eyes).
+
+6.Attach the Model
+  *Scale and attach the loaded model to the anchor’s group, so it follows the detected facial feature.
+
+7.Start the AR Session
+  *Start the AR engine using mindarThree.start() and continuously render the scene using renderer.setAnimationLoop().
+
+8.View the Output
+  *Run the app through a local web server,like NGROK, allow camera access, and observe the 3D object align with the marker or facial region.
 
 ## PROGRAM:
 ***index.html***
@@ -66,7 +91,11 @@ anchor.group.add(glasses.scene);
 ```
 
 ## OUTPUT:
+->When the application runs in the browser with camera access enabled, the AR engine detects the user’s face and attaches the 3D glasses model to the corresponding facial landmark (anchor ID 168).
+->As the user moves or tilts their head, the 3D model dynamically follows their face in real time.
 
 ## RESULT:
+->The Marker-Based WebAR application was successfully implemented using MindAR and Three.js.
+->A 3D model was loaded and accurately tracked with a detected face marker, demonstrating the principles of image and face-based AR tracking in the web environment.
 
 
