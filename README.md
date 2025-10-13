@@ -4,9 +4,9 @@
 To create a Marker-Based WebAR application using MindAR and Three.js, where a 3D model (like glasses) is anchored to a detected facial marker or image marker in real-time through a web browser.
 
 ## ALGORITHM:
-1.Start the Project Setup
-  *Create the project folder with index.html, main.js, and required assets (like 3D models and textures).
-  *Add the MindAR library and Three.js to the HTML page.
+1.Start the Project Setup:-
+Create the project folder with index.html, main.js, and required assets (like 3D models and textures).
+Add the MindAR library and Three.js to the HTML page.
 
 2.Initialize the AR Engine
   *Use MindARThree from the MindAR library to set up the AR engine, camera, and rendering context.
