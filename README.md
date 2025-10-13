@@ -8,26 +8,26 @@ To create a Marker-Based WebAR application using MindAR and Three.js, where a 3D
 Create the project folder with index.html, main.js, and required assets (like 3D models and textures).
 Add the MindAR library and Three.js to the HTML page.
 
-2.Initialize the AR Engine
-  *Use MindARThree from the MindAR library to set up the AR engine, camera, and rendering context.
+2.Initialize the AR Engine:-
+Use MindARThree from the MindAR library to set up the AR engine, camera, and rendering context.
 
-3.Add Lighting
-  *Create a HemisphereLight to properly illuminate the 3D model in the AR scene.
+3.Add Lighting:-
+Create a HemisphereLight to properly illuminate the 3D model in the AR scene.
 
-4.Load 3D Model
-  *Load a GLTF 3D model (for example, glasses1/scene.gltf) using an async function and a loader helper (loadGLTF()).
+4.Load 3D Model:-
+Load a GLTF 3D model (for example, glasses1/scene.gltf) using an async function and a loader helper (loadGLTF()).
 
-5.Create an Anchor
-  *Use mindarThree.addAnchor(id) to anchor the 3D model to a specific facial landmark (like nose or eyes).
+5.Create an Anchor:-
+Use mindarThree.addAnchor(id) to anchor the 3D model to a specific facial landmark (like nose or eyes).
 
-6.Attach the Model
-  *Scale and attach the loaded model to the anchor’s group, so it follows the detected facial feature.
+6.Attach the Model:-
+Scale and attach the loaded model to the anchor’s group, so it follows the detected facial feature.
 
-7.Start the AR Session
-  *Start the AR engine using mindarThree.start() and continuously render the scene using renderer.setAnimationLoop().
+7.Start the AR Session:-
+Start the AR engine using mindarThree.start() and continuously render the scene using renderer.setAnimationLoop().
 
-8.View the Output
-  *Run the app through a local web server,like NGROK, allow camera access, and observe the 3D object align with the marker or facial region.
+8.View the Output:-
+Run the app through a local web server,like NGROK, allow camera access, and observe the 3D object align with the marker or facial region.
 
 ## PROGRAM:
 ***index.html***
